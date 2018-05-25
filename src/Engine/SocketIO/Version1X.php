@@ -45,7 +45,8 @@ class Version1X extends AbstractSocketIO
             return;
         }
 
-        $this->handshake();
+        //disable this method for emit messages
+      //$this->handshake();
 
         $protocol = 'http';
         $errors = [null, null];
