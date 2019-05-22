@@ -237,7 +237,7 @@ class Version1X extends AbstractSocketIO
      */
     protected function upgradeTransport()
     {
-        $query = ['sid'       => $this->session->id,
+        $query = ['sid'       => isset($this->session)?$this->session->id:null,
                   'EIO'       => $this->options['version'],
                   'transport' => static::TRANSPORT_WEBSOCKET];
 
